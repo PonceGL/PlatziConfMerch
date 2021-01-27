@@ -4,7 +4,7 @@ import { Link, useHistory } from 'react-router-dom';
 import '../styles/components/Information.css';
 
 const Information = () => {
-  const { state, addToBuyer } = useContext(AppContext);
+  const { state, addToBuyer, handleSumTotal } = useContext(AppContext);
   const form = useRef(null);
   const { cart } = state;
   const history = useHistory();
@@ -67,6 +67,7 @@ const Information = () => {
             </div>
           </div>
         ))}
+        <h3>{`Precio total: $ ${handleSumTotal(cart)}`}</h3>
       </div>
     </div>
   );

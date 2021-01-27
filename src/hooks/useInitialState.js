@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import initialState from '../initialState';
 
 const useInitialState = () => {
@@ -32,11 +32,19 @@ const useInitialState = () => {
     });
   };
 
+  const handleSumTotal = (cart) => {
+    const reducer = (accumulator, currentValue) =>
+      accumulator + currentValue.price;
+    const sum = cart.reduce(reducer, 0);
+    return sum;
+  };
+
   return {
     addToCart,
     removeFromCart,
     addToBuyer,
     addNewOrder,
+    handleSumTotal,
     state,
   };
 };
