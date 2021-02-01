@@ -18,8 +18,8 @@ const Information = () => {
       'address': formData.get('address'),
       'apto': formData.get('apto'),
       'city': formData.get('city'),
-      'country': formData.get('country'),
       'state': formData.get('state'),
+      'country': formData.get('country'),
       'cp': formData.get('cp'),
       'phone': formData.get('phone'),
     };
@@ -37,11 +37,11 @@ const Information = () => {
           <form ref={form}>
             <input type="text" placeholder="Nombre completo" name="name" />
             <input type="text" placeholder="Correo Electronico" name="email" />
-            <input type="text" placeholder="Dirección" name="address" />
-            <input type="text" placeholder="Apto" name="apto" />
+            <input type="text" placeholder="Calle" name="address" />
+            <input type="text" placeholder="Numero" name="apto" />
             <input type="text" placeholder="Ciudad" name="city" />
-            <input type="text" placeholder="Pais" name="country" />
             <input type="text" placeholder="Estado" name="state" />
+            <input type="text" placeholder="Pais" name="country" />
             <input type="text" placeholder="Codigo Postal" name="cp" />
             <input type="text" placeholder="Telefono" name="phone" />
           </form>
